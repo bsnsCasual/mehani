@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet"> -->
+    <title>Document</title>
+</head>
+<style>
+    .round {
+        transform: rotate(-90deg);
+        transition: all 1.5s ease-in-out;
+        
+        /* SVG */
+        fill: none;
+        stroke: rgb(255, 136, 0);
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-dasharray: 0 999;
+
+        position: relative;
+    }
+    #per{
+        position: absolute;
+        text-align: center;
+        top: calc(50% - 20px);
+        width: 100%;
+        left: 0px;
+        font-weight: bold;
+        font-size: 20px;
+        color: teal;
+    }
+    .point{
+        position: relative;
+    }
+    #logoHandler{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    #logoHandler img{
+        width: 100%;
+    }
+    body{
+        margin: 0px;
+        padding: 0.1in;
+        padding-top: 0.7in;
+        font-family: tajawal;
+    }
+
+    nav{
+        height: 0.5in;
+        position: fixed;
+        background-color: teal;
+        width: 100vw;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    nav #navtitle{
+        float: right;
+        height: 0.5in;
+        line-height: 00.5in;
+        display: block;
+        font-size: 23px;
+        color: white;
+        margin-right: 0.1in;
+        font-weight: bold;
+    }
+    nav img{
+        height: 0.6in;
+        float: right;
+        margin-right: 0.2in;
+        margin-top: 0.1in;
+        filter: opacity(100%);
+    }
+
+    #loginDiv{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+
+    }
+    input{
+        outline: none;
+        border: none;
+        border-bottom: 3px solid steelblue;
+        height: 0.4in;
+        color: steelblue;
+        background-color: white;
+        width: 80%;
+        font-size: 18px;
+        padding: 5px;
+    }
+    button{
+        outline: none;
+        border: none;
+        background-color: rgb(64,64,64);
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+    .inlinebtn{
+        font-size: 14px;
+        margin: 0px;
+        padding: 5px;
+    }
+    .true{
+        color: steelblue;
+        font-weight: bold;
+        font-size: 80%;
+    }
+    .false{
+        color: tomato;
+        font-weight: bold;
+        font-size: 90%;
+        min-width: 0.2in;
+    }
+    .status{
+        text-align: center;
+    }
+    .info{
+        font-size: 14px;
+    }
+</style>
+<body> <!--Hello+-Wow2000-->
+
+    <nav>
+        <img src="./logo-min.png" alt="">
+        <span id="navtitle">واجهة متابعة الزبائن</span>
+    </nav>
+    <center>
+        <div class="point">
+            <svg id="wow" class="round" viewbox="0 0 100 100" width="100" height="100" data-percent="40">
+              <circle cx="50" cy="50" r="40" />  
+            </svg>
+            <span id="per"></span>
+        </div> 
+
+        <table style="width: 90%; border-collapse: collapse; margin-bottom: 10px;">
+            <tr style="text-align: right; vertical-align: top; border-bottom: 2px solid rgb(87, 199, 199);">
+                <td style="color: teal;">المشروع</td>
+                <td>أتمتة العمل في ثانوية مهيب علوان المهنية</td>
+            </tr>
+            <tr style="vertical-align: middle; text-align: right;border-bottom: 2px solid rgb(87, 199, 199);">
+                <td style="color: teal;">الدعم الفني والشكاوى</td>
+                <td>0930195071</td>
+            </tr>
+            <tr style="text-align: right; vertical-align: top; border-bottom: 2px solid rgb(87, 199, 199);">
+                <td style="color: teal;">حالة المشروع</td>
+                <td style="color: teal; font-weight: bold;">مفعل</td>
+            </tr>
+        </table>
+
+        <p id="todate" style="float: right;"></p>
+        <table style="width: 95%; border-collapse: collapse;">
+            <tr style="text-align: center;">
+                <td style="background-color: teal; color: white;">المهمة</td>
+                <td colspan="2" style="background-color: teal; color: white; padding-left: 10px; padding-right: 10px;">أنجزت</td>
+            </tr>
+            <tr style="border-bottom: 1px solid teal;">
+                <td class="info">
+                    إعداد واجهة إدخال البيانات الأساسية
+                </td>
+                <td colspan="2" class="status true">نعم</td>
+            </tr>
+            <tr style="border-bottom: 1px solid teal;">
+                <td class="info">
+                    تنفيذ المفاضلة المؤتمتة وإصدار النتائج عبر الانترنت
+                </td>
+                <td colspan="2" class="status true">نعم</td>
+            </tr>
+            <tr style="border-bottom: 1px solid teal;">
+                <td class="info">
+                    إعداد المخططات الهندسية للشبكة
+                </td>
+                <td colspan="2" class="status true">
+                    نعم
+                    <button class="inlinebtn">تحميل pdf</button>
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid teal;">
+                <td class="info">
+                    تركيب الخزن والسويتشات
+                </td>
+                <td class="status false">#</td>
+                <td class="status true">Deadline 31/10/2021</td>
+            </tr>
+            <tr style="border-bottom: 1px solid teal;">
+                <td class="info">
+                    تدريب الموظفين المعنيين في المؤسسة
+                </td>
+                <td class="status false">#</td>
+                <td class="status true">يستمر 31/10/2021 - 01/01/2022</td>
+            </tr>
+            <tr style="border-bottom: 1px solid teal;">
+                <td class="info">
+                    بدء إصدار الثبوتيات المؤتمتة
+                </td>
+                <td class="status false">#</td>
+                <td class="status true">Deadline 25/11/2021</td>
+            </tr>
+        </table>
+    </center>
+    <br><br>
+    <center>
+        <div id="logoHandler">
+            <img src="./logo.png" alt="">
+        </div>
+    </center>
+
+    <div id="loginDiv">
+        <br><br><br><br>
+        <center>
+            <img style="height: 1in; display: block; margin-bottom: 0.5in;" src="./logo.png" alt="">
+
+            <input id="unxyx" type="text" placeholder="اسم المستخدم..."><br><br>
+            <input onchange="login()" id="pwxyx" type="password" placeholder="رمز الدخول..."><br>
+
+            <button onclick="login()">دخول</button>
+        </center>
+    </div>
+</body>
+</html>
+
+<script src="./jquery.js"></script>
+<script>
+    percentager = 35;
+
+    function ref() {
+        var $round = $('.round'),
+            roundRadius = $round.find('circle').attr('r'),
+            roundPercent = percentager, //$round.data('percent'),
+            roundCircum = 2 * roundRadius * Math.PI,
+            roundDraw = roundPercent * roundCircum / 100
+            $round.css('stroke-dasharray', roundDraw  + ' 999');
+        
+        index = 1;
+        test = setInterval(() => {
+            console.log(index + ';');
+            document.getElementById("per").innerHTML =  index + "%";
+            index++;
+            if(index == percentager+1){
+                clearInterval(test);
+            }
+        }, 30);
+    }
+</script>
+
+<script>
+    function login(){
+        usernamex = document.getElementById("unxyx").value;
+        passwordx = document.getElementById("pwxyx").value;
+        if(usernamex == "mehan" && passwordx == "1234"){
+            document.getElementById("loginDiv").style.display = "none";
+            ref();
+        } else {
+            alert("كلمة المرور أو اسم المستخدم غير صحيح!...");
+        }
+    }
+
+    document.getElementById("todate").innerHTML = "تاريخ اليوم " + Date().split("GMT+0300 (Eastern European Summer Time)")[0];
+</script>
