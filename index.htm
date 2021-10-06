@@ -132,7 +132,7 @@
         font-size: 14px;
     }
 </style>
-<body> <!--Hello+-Wow2000-->
+<body onload="ref()">
 
     <nav>
         <img src="./logo-min.png" alt="">
@@ -262,7 +262,6 @@
         passwordx = document.getElementById("pwxyx").value;
         if(usernamex == "mehan" && passwordx == "1234"){
             document.getElementById("loginDiv").style.display = "none";
-            ref();
         } else {
             alert("كلمة المرور أو اسم المستخدم غير صحيح!...");
         }
