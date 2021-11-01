@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet"> -->
     <title>Document</title>
 </head>
 <style>
@@ -131,12 +131,21 @@
     .info{
         font-size: 14px;
     }
+    td{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
 </style>
-<body onload="ref()">
-
+<body> <!--Hello+-Wow2000-->
+<!--
+    حقل للمكاسب الزمنية
+    الاسم: مقترح - واجهة تقييم الأداء
+    واجهة متابعة مشروعك (شيء شخصي)
+-->
     <nav>
         <img src="./logo-min.png" alt="">
-        <span id="navtitle">واجهة متابعة الزبائن</span>
+        <!--<span id="navtitle">واجهة متابعة الزبائن</span>-->
+        <span id="navtitle">واجهة متابعة مشروعك</span>
     </nav>
     <center>
         <div class="point">
@@ -185,7 +194,7 @@
                 </td>
                 <td colspan="2" class="status true">
                     نعم
-                    <a style="text-decoration: none" href="./plan.pdf"><button class="inlinebtn">تحميل pdf</button></a>
+                    <button class="inlinebtn">تحميل pdf</button>
                 </td>
             </tr>
             <tr style="border-bottom: 1px solid teal;">
@@ -260,12 +269,14 @@
     function login(){
         usernamex = document.getElementById("unxyx").value;
         passwordx = document.getElementById("pwxyx").value;
-        if(usernamex == "mehani" && passwordx == "1234"){
+        if(usernamex == "mehan" && passwordx == "1234"){
             document.getElementById("loginDiv").style.display = "none";
         } else {
             alert("كلمة المرور أو اسم المستخدم غير صحيح!...");
         }
+        window.scrollTo(x=0, y=0);
+        ref();
     }
 
     document.getElementById("todate").innerHTML = "تاريخ اليوم " + Date().split("GMT+0300 (Eastern European Summer Time)")[0];
-</script>
+</script> 
